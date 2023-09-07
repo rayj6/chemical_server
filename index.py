@@ -1,4 +1,4 @@
-from app import app  # Replace 'your_flask_app' with your actual Flask app module name
+from app import app  # Replace with the name of your Flask app instance
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
