@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from chempy import balance_stoichiometry
 from flask_cors import CORS
 import os
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -36,6 +37,20 @@ def balance():
 
     return jsonify({"balanced_equation": balanced_equation})
 
+
+# @app.route('/complete', methods=['POST'])
+# def complete():
+    
+#     data = request.json  # Assuming data is sent in JSON format
+
+#     equation = data.get('equation')  # Assuming 'equation' is the key for the equation in the JSON data
+#     print(equation)
+
+#     # Get user input for the chemical equation
+#     # equation = input("Enter a chemical equation: ")
+
+#     # Use regular expressions to split the equation into reactants and products
+    
 
 @app.route('/')
 def home():
