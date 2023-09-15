@@ -10,9 +10,8 @@ function BalanceEquation(app) {
         const { question } = req.body;
         let userInput = question;
 
-        const equation = balanceEq(userInput);
-        console.log(equation.outChem);
-        res.send(equation.outChem);
+        const result = balanceEq(userInput).outChem;
+        res.send(result);
     });
 }
 
