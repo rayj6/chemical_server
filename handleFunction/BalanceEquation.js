@@ -7,10 +7,9 @@ function BalanceEquation(app) {
 
     // Create a route to receive data and insert it into the database
     app.post("/balance-equation", async (req, res) => {
-        const { question } = req.body;
-        let userInput = question;
+        const { equation } = req.body;
 
-        const result = balanceEq(userInput).outChem;
+        const result = balanceEq(equation).outChem;
         res.send(result);
     });
 }
